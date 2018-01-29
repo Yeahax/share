@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>亲爱的盈妹妹 - By MikaYe</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		html{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		body{
+			font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; 
+			width: 100%;
+			height: 100%;
+			background: url(333.jpeg) no-repeat;
+			background-size: 100% 100%; 
+			overflow: hidden;
+		}
+		.contain{
+			width: 90%;
+			height: 94%;
+			line-height: 25px;
+			margin: 5% auto;
+			background-color: rgba(255,255,255,0.7);
+			border-radius: 8px;
+			padding: 10px;
+			box-sizing: border-box;
+			animation:mymove 0.6s 1;
+			-webkit-animation:mymove 0.6s 1; /* Safari 和 Chrome */
+		}
+
+		@keyframes mymove
+		{
+			from {transform: translateY(-80%) scale(0); opacity:0;}
+			to {transform: translateY(10%) scale(1);opacity: 1;}
+		}
+	</style>
+</head>
+<body>
+	<script src="theater.min.js"></script>
+	<div class="contain">
+		<div id="To"></div>
+	</div>
+
+	<script src="path/to/theater.min.js"></script>
+	<script>
+	  var theater = theaterJS()
+	  
+	  theater
+	    .on('type:start, erase:start', function () {
+	      // add a class to actor's dom element when he starts typing/erasing
+	      var actor = theater.getCurrentActor()
+	      actor.$element.classList.add('is-typing')
+	    })
+	    .on('type:end, erase:end', function () {
+	      // and then remove it when he's done
+	      var actor = theater.getCurrentActor()
+	      actor.$element.classList.remove('is-typing')
+	    })
+	  
+	  theater
+	    .addActor('To')
+	    
+	  setTimeout(function(){
+
+	  		theater
+		    .addScene('To:To盈妹妹:<br>   <div style="text-indent: 18px;"><p>2017年11月10日，我和你在茫茫人海中相遇；</p><p>2017年11月18日，我们第一次相见，当天你在寒风下等了我1个多小时；</p><p>2018年1月25号，我把你气哭了；</p><p>...</p><p>在这两个多月里面，我真的很开心，也很珍惜在一起的时光，中间我也做了很多自私、自以为是的事，但你也能原谅我，很感谢你对我的宽容和体谅，让我也意识到自己的不足，逐渐成长。但在2018年1月29号，我们吵了一场大架，你说出了分手，听了之后我感觉好害怕，害怕失去你，经过自己的反省之后，感觉自己真的做错了好多事，也伤害了你，我想和你说一声：对不起，这段时间委屈你了。希望你可以原谅我，不要抛弃我，我以后再也不会这么自私了，会更多地为别人着想，亦会更好的去对你！</p><p>亲爱的，对不起。</p><div><div style="text-align:right">By MikaYe<div>', 400)
+		    .addScene(function (done) {
+			    
+			})
+
+
+	  },700)
+
+	  var a = 0;
+	  setInterval(function(){
+	  	a++;
+	  	if(a % 2 != 0){
+	  		document.querySelector("body").style.background = "url(444.jpeg)";
+	  		document.querySelector("body").style.backgroundSize = "100% 100%";
+	  	}else{
+	  		document.querySelector("body").style.background = "url(333.jpeg)";
+	  		document.querySelector("body").style.backgroundSize = "100% 100%";
+	  	}
+	  	
+	  },7000);
+	</script>
+</body>
+</html>
